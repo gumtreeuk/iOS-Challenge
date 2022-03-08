@@ -7,6 +7,8 @@
 
 #import "AppDelegate.h"
 
+@class HomeViewController;
+
 @interface AppDelegate ()
 
 @end
@@ -14,10 +16,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // todo set the controller
-//    UIViewController *viewController = [UIViewController new];
+    HomeViewController *viewController = [HomeViewController new];
     self.navigationController = [UINavigationController new];
-    self.navigationController.viewControllers =@[];
+    self.navigationController.viewControllers =@[viewController];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
 
